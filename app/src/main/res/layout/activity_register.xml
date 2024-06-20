@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginActivity">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_regis"
+        android:layout_width="320dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="52dp"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/progressIndicator">
+
+
+        <TextView
+            android:id="@+id/slogan"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="start"
+            android:layout_marginStart="25dp"
+            android:text="@string/slogan"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivlogin"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="120dp"
+            android:contentDescription="@string/input"
+            android:src="@drawable/login"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_regis2"
+        android:layout_width="320dp"
+        android:layout_height="450dp"
+        android:background="@drawable/rectangle_hasil"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/rl_regis">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="@string/registration"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/cvName"
+            android:layout_marginBottom="16dp"/>
+
+        <com.dicoding.drinknt.cv.NameCV
+            android:id="@+id/cvName"
+            android:layout_width="280dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:hint="@string/name"
+            app:layout_constraintEnd_toEndOf="@id/tvregister"
+            app:layout_constraintStart_toStartOf="@id/tvregister"
+            app:layout_constraintTop_toBottomOf="@id/tvregister"/>
+
+        <com.dicoding.drinknt.cv.EmailCV
+            android:id="@+id/cvEmail"
+            android:layout_width="280dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:hint="@string/typ_email"
+            app:layout_constraintEnd_toEndOf="@id/cvName"
+            app:layout_constraintStart_toStartOf="@id/cvName"
+            app:layout_constraintTop_toBottomOf="@id/cvName" />
+
+        <com.dicoding.drinknt.cv.PasswordCV
+            android:id="@+id/cvPass"
+            android:layout_width="280dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:hint="@string/typ_pass"
+            app:layout_constraintEnd_toEndOf="@id/cvEmail"
+            app:layout_constraintStart_toStartOf="@id/cvEmail"
+            app:layout_constraintTop_toBottomOf="@id/cvEmail" />
+
+        <com.dicoding.drinknt.cv.SamePassCV
+            android:id="@+id/cvSamePass"
+            android:layout_width="280dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:hint="@string/confirm_password"
+            app:layout_constraintEnd_toEndOf="@id/cvPass"
+            app:layout_constraintStart_toStartOf="@id/cvPass"
+            app:layout_constraintTop_toBottomOf="@id/cvPass" />
+
+        <TextView
+            android:id="@+id/btnRegis"
+            android:layout_width="280dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:text="@string/register"
+            android:background="@drawable/btnlogin"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/cvSamePass"
+            app:layout_constraintStart_toStartOf="@id/cvSamePass"
+            app:layout_constraintTop_toBottomOf="@id/seePass"/>
+
+        <CheckBox
+            android:id="@+id/seePass"
+            android:layout_width="280dp"
+            android:layout_marginTop="295dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:text="@string/show_pass"
+            app:layout_constraintStart_toStartOf="@+id/cvSamePass"
+            app:layout_constraintTop_toBottomOf="@+id/cvSamePass"
+            tools:alpha="1" />
+
+        <TextView
+            android:id="@+id/otherMethod"
+            android:layout_width="match_parent"
+            android:layout_marginTop="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:text="@string/or_signup"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnRegis"
+            app:layout_constraintHorizontal_bias="0.392"
+            app:layout_constraintStart_toStartOf="@+id/btnRegis"
+            tools:alpha="1" />
+
+        <ImageView
+            android:id="@+id/btnGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="405dp"
+            android:layout_marginStart="110dp"
+            android:src="@drawable/btngoogle"/>
+
+        <ImageView
+            android:id="@+id/btnFb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="405dp"
+            android:layout_marginStart="170dp"
+            android:src="@drawable/btnfb"/>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

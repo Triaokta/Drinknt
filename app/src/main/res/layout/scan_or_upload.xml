@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".ScanOrUpload">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pilihan3"
+        android:layout_width="330dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="150dp"
+        app:flow_verticalAlign="center"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressIndicator">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="@string/pilih_tindakan"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pilihan1"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_pilihan3">
+
+        <ImageView
+            android:id="@+id/pilihan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pilihan" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pilihan2"
+        android:layout_width="330dp"
+        android:layout_height="125dp"
+        android:background="@drawable/rectangle_1"
+        app:flow_verticalAlign="center"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_pilihan1">
+
+        <ImageView
+            android:id="@+id/btnCamera"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/btncam"/>
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="90dp"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="@string/camera_string"/>
+
+        <ImageView
+            android:id="@+id/btnUpload"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="202dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/btnupload" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="90dp"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="@string/upload_string" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
